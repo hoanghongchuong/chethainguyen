@@ -56,13 +56,13 @@
 								      	<input type="text" name="txtEmail" value="{!! old('txtEmail', isset($data) ? $data->email : null) !!}"  class="form-control" />
 									</div>
 									<div class="form-group">
-								      	<label for="ten">Điện thoại</label>
+								      	<label for="ten">Số điện thoại 1</label>
 								      	<input type="text" name="txtPhone" value="{!! old('txtPhone', isset($data) ? $data->phone : null) !!}"  class="form-control" />
 									</div>
-									<!-- <div class="form-group">
-								      	<label for="ten">Hotline</label>
+									<div class="form-group">
+								      	<label for="ten">Số điện thoại 2</label>
 								      	<input type="text" name="txtHotline" value="{!! old('txtHotline', isset($data) ? $data->hotline : null) !!}"  class="form-control" />
-									</div> -->
+									</div>
 									<!-- <div class="form-group">
 								      	<label for="ten">Mô tả</label>								      	
 								      	<textarea name="txtFax" id=""  rows="5" class="form-control">{!! old('txtFax', isset($data) ? $data->fax : null) !!}</textarea>
@@ -76,7 +76,7 @@
 								      	<input type="text" name="txtTitle_index" value="{!! old('txtTitle_index', isset($data) ? $data->title_index : null) !!}"  class="form-control" />
 									</div> -->
 									<div class="form-group">
-								      	<label for="ten">Copyright</label>
+								      	<label for="ten">Số điện thoại 13</label>
 								      	<input type="text" name="txtCopyright" value="{!! old('txtCopyright', isset($data) ? $data->copyright : null) !!}"  class="form-control" />
 									</div>
 								</div>
@@ -85,10 +85,10 @@
 								      	<label for="ten">Facebook</label>
 								      	<input type="text" name="txtFacebook" value="{!! old('txtFacebook', isset($data) ? $data->facebook : null) !!}"  class="form-control" />
 									</div>
-									<div class="form-group">
+									<!-- <div class="form-group">
 								      	<label for="ten">Twitter</label>
 								      	<input type="text" name="txtTwitter" value="{!! old('txtTwitter', isset($data) ? $data->twitter : null) !!}"  class="form-control" />
-									</div>
+									</div> -->
 									<div class="form-group">
 								      	<label for="ten">Google</label>
 								      	<input type="text" name="txtGoogle" value="{!! old('txtGoogle', isset($data) ? $data->google : null) !!}"  class="form-control" />

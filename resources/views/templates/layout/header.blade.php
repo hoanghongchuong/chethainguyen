@@ -11,12 +11,12 @@
                     <a href="" title=""><img src="{{asset('upload/hinhanh/'.$setting->photo)}}" class="logo-img" alt=""></a>
                 </div>
                 <div class="col-md-9 col-xs-12">
-                    <p class="company_name">Htx tổng hợp chè thành công</p>
+                    <p class="company_name">{{$setting->company}}</p>
                     <p class="company_namex">Đặc sản chè thái nguyên</p>
                     <div class="box-item-header col-xs-12 col-md-4 hidden-xs">
                         <div class="col-md-2 col-xs-2"><img src="{{asset('public/images/add.png')}}" alt=""></div>
                         <div class="col-md-10 col-xs-10 pdr-0" style="font-size: 16px">
-                            Quyết Tiến - Tức Thanh <br>Phú Lương - Thái Nguyên
+                           {{$setting->address}}
                         </div>
                     </div>
                     <div class="box-item-header col-xs-12 col-md-4 hidden-xs">
@@ -29,9 +29,9 @@
                     <div class="box-item-header col-xs-12 col-md-4 hidden-xs">
                         <div class="col-md-2 col-xs-2"><img src="{{asset('public/images/phone.png')}}" alt=""></div>
                         <div class="col-md-10 col-xs-10" style="margin-top: -7px; font-size: 16px;">
-                            0824 070 555<br>
-                            0362 556 668 <br>
-                            0866 132 989
+                            {{$setting->phone}}<br>
+                            {{$setting->hotline}} <br>
+                            {{$setting->copyright}}
                         </div>
                     </div>
                 </div>

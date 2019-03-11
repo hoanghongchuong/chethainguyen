@@ -8,9 +8,9 @@
             <div class="col-md-5 info pdl-0">
                 <div class="box-logo"><a href="" title=""><img src="{{asset('upload/hinhanh/'.$setting->photo_footer)}}" alt=""></a></div>
                 <h3>Hợp tác xã tổng hợp chè thành công</h3>
-                <p>Xưởng sản xuất: Quyết tiến - Tức Tranh - Phú Lương - Thái Nguyên</p>
+                <p>Xưởng sản xuất: {{$setting->address}}</p>
                 <p>Cửa hàng GTSP: Số nhà 177 -181 Đông Ngạc - Bắc Từ Liêm - Hà Nội</p>
-                <p>SĐT: 0824 070 555 - 0362 556 688 - 0866 132 989</p>
+                <p>SĐT: {{$setting->phone}} - {{$setting->hotline}} - {{$setting->copyright}}</p>
             </div>
             <div class="col-md-4">
                 <p class="map">Bản đồ</p>
