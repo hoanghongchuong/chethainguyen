@@ -71,6 +71,10 @@ Route::get('tin-tuc',['as'=>'getListNews', 'uses'=>'IndexController@getNews']);
 Route::get('tin-tuc/{alias}.html',['as'=>'getNewsDetail', 'uses'=>'IndexController@getNewsDetail']);
 Route::get('tin-tuc/{alias}',['as'=>'getListNews', 'uses'=>'IndexController@getListNews']);
 
+Route::get('van-hoa-tra',['as'=>'getVanHoa', 'uses'=>'IndexController@getVanHoa']);
+Route::get('van-hoa-tra/{alias}.html',['as'=>'getVanHoaDetail', 'uses'=>'IndexController@getVanHoaDetail']);
+Route::get('van-hoa-tra/{alias}',['as'=>'getListVanHoa', 'uses'=>'IndexController@getListVanHoa']);
+
 Route::get('{id}.html',['as'=>'getProductDetail', 'uses'=>'IndexController@getProductDetail']);
 Route::get('bai-viet/{id}.html',['as'=>'getBaiVietDetail', 'uses'=>'IndexController@getBaiVietDetail']);
 Route::get('error/404.html',['as'=>'getErrorNotFount', 'uses'=>'IndexController@getErrorNotFount']);

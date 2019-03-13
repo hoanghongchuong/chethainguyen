@@ -110,7 +110,7 @@ $sliders = DB::table('slider')->where('status',1)->where('com','gioi-thieu')->or
         </div>
     </div>
 </div>
-<div class="content-home">
+<div class="content-home box-news-home">
     <div class="container">
         <h2 class="title_home">Tin tức</h2>
         <div class="dongke"><span></span></div>

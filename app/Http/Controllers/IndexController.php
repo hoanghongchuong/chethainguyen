@@ -256,6 +256,20 @@ class IndexController extends Controller {
 		// End cấu hình SEO
 		return view('templates.news_tpl', compact('tintuc','keyword','description','title','img_share','com','cateNews','hot_news'));
 	}
+	public function getVanHoa()
+	{
+		
+		$tintuc = DB::table('news')->select()->where('status',1)->where('com','van-hoa')->orderby('id','desc')->paginate(10);		
+		$hot_news = DB::table('news')->where('status',1)->where('com','van-hoa')->where('noibat',1)->orderby('id','desc')->take(6)->get();
+		$com='van-hoa';
+		// Cấu hình SEO
+		$title = "Văn hóa chè";
+		$keyword = "Văn hóa chè";
+		$description = "Văn hóa chè";
+		$img_share = '';
+		// End cấu hình SEO
+		return view('templates.vanhoa_tpl', compact('tintuc','keyword','description','title','img_share','com','cateNews','hot_news'));
+	}
 	public function getListNews($id)
 	{
 		//Tìm article thông qua mã id tương ứng
@@ -308,7 +322,30 @@ class IndexController extends Controller {
 		}
 		
 	}
-	
+	public function getVanHoaDetail($id)
+	{
+		$news_detail = DB::table('news')->select()->where('status',1)->where('com','van-hoa')->where('alias',$id)->first();
+		
+		if(!empty($news_detail)){			
+			$cate_pro = DB::table('product_categories')->where('status',1)->where('parent_id',0)->orderby('id','asc')->get();			
+			$com='van-hoa';
+			$setting = Cache::get('setting');
+			// Cấu hình SEO
+			if(!empty($news_detail->title)){
+				$title = $news_detail->title;
+			}else{
+				$title = $news_detail->name;
+			}
+			$keyword = $news_detail->keyword;
+			$description = $news_detail->description;
+			$img_share = asset('upload/news/'.$news_detail->photo);
+
+			return view('templates.vanhoa_detail_tpl', compact('news_detail','com','keyword','description','title','img_share'));
+		}else{
+			return redirect()->route('getErrorNotFount');
+		}
+		
+	}
 
 	public function postGuidonhang(Request $request)
 	{
